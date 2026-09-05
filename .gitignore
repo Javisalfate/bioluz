@@ -1,0 +1,7 @@
+# Archivos que Windows y macOS crean solos y no sirven en la web
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Configuración local de Claude Code
+.claude/
