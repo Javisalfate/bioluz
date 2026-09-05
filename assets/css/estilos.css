@@ -437,6 +437,8 @@ body.borrador .foto-portada,
   .partido{ grid-template-columns:1fr; gap:34px; }
   .partido-invertido .partido-texto{ order:0; }
   .portada-rejilla{ grid-template-columns:1fr; gap:38px; }
+  /* Misma especificidad que la regla de arriba, si no, no la pisa */
+  body.borrador .foto-portada,
   .foto-portada{ min-height:340px; }
   .pie-rejilla{ grid-template-columns:1fr 1fr; gap:32px; }
 }
