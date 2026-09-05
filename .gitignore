@@ -5,3 +5,7 @@ desktop.ini
 
 # Configuración local de Claude Code
 .claude/
+
+# Fotos originales sin optimizar (pesadas, no van a la web)
+Portada1.jpg.png
+Portada2.jpg.jpeg
