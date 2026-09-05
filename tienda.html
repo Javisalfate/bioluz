@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tienda — Bioluz Chile, Alcohuaz</title>
+<meta name="description" content="Imanes de biomagnetismo, libro digital y suplementos, desde el Centro Bioluz en Alcohuaz, Valle de Elqui. Despacho a todo Chile o retiro en el centro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body class="borrador">
+
+<header class="cabecera">
+  <div class="contenedor cabecera-interior">
+    <a class="logo" href="index.html">
+      <span class="logo-nombre">Bioluz</span>
+      <span class="logo-bajada">Alcohuaz · Valle de Elqui</span>
+    </a>
+    <button class="boton-menu" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="terapias.html">Terapias</a>
+      <a href="tienda.html" class="activo">Tienda</a>
+      <a href="seminarios.html">Seminarios</a>
+      <a href="centro.html">El centro</a>
+      <a href="cabanas.html">Cabañas</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#pedido" class="btn btn-principal btn-cabecera">Ver mi pedido</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== ENCABEZADO ===================== -->
+<section class="seccion seccion-crema">
+  <div class="contenedor">
+    <span class="etiqueta">Tienda</span>
+    <h1 style="max-width:20ch">Lo que usamos, a tu casa</h1>
+    <p class="intro">
+      Los mismos imanes y materiales que ocupamos en las sesiones y en los
+      seminarios. Despachamos a todo Chile, o los retiras en el centro si
+      vienes a Alcohuaz.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== AVISO DE EJEMPLO ===================== -->
+<section class="seccion-compacta">
+  <div class="contenedor-angosto">
+    <div class="aviso-atencion">
+      <p>
+        <strong>Esto es un ejemplo para revisar.</strong>
+        Los tres productos, las fotos y los precios son de muestra: sirven para
+        ver cómo se vería y cómo funciona la compra.
+      </p>
+      <p>
+        El carrito ya funciona de verdad — puedes agregar productos, cambiar
+        cantidades y elegir despacho. Lo único que falta es conectar el pago en
+        línea, que se activa cuando la cuenta de Mercado Pago esté abierta.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCTOS ===================== -->
+<section class="seccion" style="padding-top:0">
+  <div class="contenedor">
+
+    <div class="rejilla rejilla-3" id="productos">
+
+      <article class="tarjeta producto"
+               data-id="imanes"
+               data-nombre="Par de imanes de biomagnetismo"
+               data-precio="35000"
+               data-tipo="fisico">
+        <div class="producto-foto">
+          <img src="assets/img/imanes.webp" alt="Par de imanes de biomagnetismo forrados en cuero, uno rojo y uno negro" width="500" height="400">
+        </div>
+        <h3>Par de imanes de biomagnetismo</h3>
+        <p>
+          El par que se entrega en el diplomado: 1.200 gauss, forrados en cuero
+          y con su banda. Uno rojo y uno negro, para trabajar el par
+          biomagnético.
+        </p>
+        <div class="precio">$35.000
+          <span>par completo · se despacha</span>
+        </div>
+        <div class="grupo-botones">
+          <button type="button" class="btn btn-principal btn-ancho" data-agregar="imanes">Agregar al pedido</button>
+        </div>
+      </article>
+
+      <article class="tarjeta producto"
+               data-id="libro"
+               data-nombre="Libro digital: Biomagnetismo para todos"
+               data-precio="12000"
+               data-tipo="digital">
+        <div class="producto-foto">
+          <img src="assets/img/libro-biomagnetismo.webp" alt="Portada del libro digital Biomagnetismo para todos" width="400" height="360">
+        </div>
+        <span class="cinta">Descarga inmediata</span>
+        <h3>Biomagnetismo para todos</h3>
+        <p>
+          Guía escrita por el Ing. Claudio Meza C., discípulo del Dr. Isaac
+          Goiz. Un buen punto de partida para entender el par biomagnético
+          antes de tomar el diplomado.
+        </p>
+        <div class="precio">$12.000
+          <span>libro digital · llega por correo</span>
+        </div>
+        <div class="grupo-botones">
+          <button type="button" class="btn btn-secundario btn-ancho" data-agregar="libro">Agregar al pedido</button>
+        </div>
+      </article>
+
+      <article class="tarjeta producto"
+               data-id="vitaminad"
+               data-nombre="Vitamina D 800 UI"
+               data-precio="14900"
+               data-tipo="fisico">
+        <div class="producto-foto">
+          <img src="assets/img/vitamina-d.webp" alt="Tres frascos de suplemento alimenticio Vitamina D 800 UI de Pranalab" height="400" width="400">
+        </div>
+        <h3>Vitamina D 800 UI</h3>
+        <p>
+          Suplemento alimenticio de Pranalab, 60 cápsulas. Es el que
+          recomendamos a quienes vienen al centro y viven en zonas con poco
+          sol.
+        </p>
+        <div class="precio">$14.900
+          <span>60 cápsulas · se despacha</span>
+        </div>
+        <div class="grupo-botones">
+          <button type="button" class="btn btn-secundario btn-ancho" data-agregar="vitaminad">Agregar al pedido</button>
+        </div>
+      </article>
+
+    </div>
+
+    <p style="margin-top:26px; font-size:.9rem; color:var(--texto-tenue); max-width:70ch">
+      Los suplementos alimenticios no son medicamentos y no reemplazan una
+      alimentación equilibrada ni el tratamiento indicado por tu médico.
+    </p>
+
+  </div>
+</section>
+
+<!-- ===================== EL PEDIDO ===================== -->
+<section class="seccion seccion-crema" id="pedido">
+  <div class="contenedor-angosto">
+    <span class="etiqueta">Tu pedido</span>
+    <h2 style="margin-bottom:26px">Revisa antes de pagar</h2>
+
+    <div class="caja-pedido">
+
+      <p id="pedido-vacio" class="pedido-vacio">
+        Todavía no has agregado nada. Elige lo que quieras arriba y aparece acá.
+      </p>
+
+      <div id="pedido-detalle" hidden></div>
+
+      <div id="pedido-resumen" hidden>
+
+        <div id="bloque-despacho" class="campo" style="margin-top:24px">
+          <label for="despacho">¿Cómo lo quieres recibir?</label>
+          <select id="despacho">
+            <option value="chile">Resto de Chile — $5.990</option>
+            <option value="coquimbo">Región de Coquimbo — $3.990</option>
+            <option value="retiro">Retiro en el centro, Alcohuaz — sin costo</option>
+          </select>
+        </div>
+
+        <p id="nota-digital" class="nota-digital" hidden>
+          Tu pedido es solo digital, así que no hay despacho: te llega al correo.
+        </p>
+
+        <div class="sumas">
+          <div class="fila-suma">
+            <span>Productos</span>
+            <strong id="suma-productos">$0</strong>
+          </div>
+          <div class="fila-suma" id="fila-envio">
+            <span>Despacho</span>
+            <strong id="suma-envio">$0</strong>
+          </div>
+          <div class="fila-suma fila-total">
+            <span>Total</span>
+            <strong id="suma-total">$0</strong>
+          </div>
+        </div>
+
+        <div class="grupo-botones" style="margin-top:24px">
+          <button type="button" class="btn btn-principal btn-ancho" disabled title="Se activa cuando la cuenta de Mercado Pago esté abierta">
+            Pagar en línea
+          </button>
+        </div>
+        <p class="aviso-formulario" style="margin-bottom:18px">
+          El pago en línea se activa cuando esté lista la cuenta de Mercado Pago.
+          Mientras tanto, puedes enviar el pedido por WhatsApp:
+        </p>
+
+        <div class="grupo-botones" style="margin-top:0">
+          <a href="#" id="pedir-whatsapp" class="btn btn-wsp btn-ancho">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:19px;height:19px" aria-hidden="true">
+              <path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2"/>
+            </svg>
+            Enviar pedido por WhatsApp
+          </a>
+        </div>
+
+        <p style="text-align:center; margin:16px 0 0">
+          <button type="button" id="vaciar" class="enlace-suave">Vaciar el pedido</button>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREGUNTAS ===================== -->
+<section class="seccion">
+  <div class="contenedor-angosto">
+    <span class="etiqueta">Sobre las compras</span>
+    <h2 style="margin-bottom:26px">Preguntas frecuentes</h2>
+
+    <details class="pregunta">
+      <summary>¿Cuánto demora el despacho?</summary>
+      <p>
+        Los envíos salen desde Alcohuaz, en el Valle de Elqui. A la Región de
+        Coquimbo llegan en 2 a 3 días hábiles, y al resto de Chile entre 3 y 6
+        días hábiles.
+      </p>
+    </details>
+
+    <details class="pregunta">
+      <summary>¿Puedo retirar en el centro?</summary>
+      <p>
+        Sí, y no tiene costo. Al confirmar tu pedido coordinamos el día. Si
+        vienes por una terapia, lo dejamos listo para ese mismo día.
+      </p>
+    </details>
+
+    <details class="pregunta">
+      <summary>El libro digital, ¿cómo llega?</summary>
+      <p>
+        Te llega al correo apenas se confirme el pago. No tiene despacho ni
+        costo de envío.
+      </p>
+    </details>
+
+    <details class="pregunta">
+      <summary>¿Puedo pagar con tarjeta?</summary>
+      <p>
+        Sí, con débito o crédito. También puedes pagar por transferencia. El
+        pago se hace en una página segura y nosotros nunca vemos los datos de
+        tu tarjeta.
+      </p>
+    </details>
+
+    <details class="pregunta">
+      <summary>¿Y si me llega dañado o no era lo que esperaba?</summary>
+      <p>
+        Escríbenos por WhatsApp dentro de los primeros 10 días y lo resolvemos:
+        cambiamos el producto o devolvemos el dinero.
+      </p>
+    </details>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie-rejilla">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:16px">
+          <span class="logo-nombre">Bioluz</span>
+          <span class="logo-bajada">Alcohuaz · Valle de Elqui</span>
+        </a>
+        <p style="max-width:36ch">
+          Centro de terapias holísticas y seminarios en Alcohuaz, comuna de
+          Paihuano, Región de Coquimbo.
+        </p>
+      </div>
+      <div>
+        <h4>La web</h4>
+        <ul>
+          <li><a href="terapias.html">Terapias</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="seminarios.html">Seminarios</a></li>
+          <li><a href="centro.html">El centro</a></li>
+          <li><a href="cabanas.html">Cabañas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/56961580539">+56 9 6158 0539</a></li>
+          <li><a href="mailto:contacto@bioluz.cl">contacto@bioluz.cl</a></li>
+          <li>Alcohuaz, Paihuano<br>Región de Coquimbo, Chile</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie-abajo">
+      <span>© 2026 Bioluz Chile</span>
+      <span>Las terapias son un acompañamiento complementario y no reemplazan atención médica.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra flotante con el total -->
+<a class="barra-pedido" id="barra-pedido" href="#pedido" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+    <path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>
+  </svg>
+  <span class="barra-texto">0 productos</span>
+</a>
+
+<a class="wsp-flotante" href="https://wa.me/56961580539?text=Hola%20Bioluz%2C%20quiero%20consultar%20por%20un%20producto." target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24">
+    <path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2"/>
+  </svg>
+  WhatsApp
+</a>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/tienda.js"></script>
+</body>
+</html>

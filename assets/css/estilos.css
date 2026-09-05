@@ -51,6 +51,9 @@
 
 *,*::before,*::after{ box-sizing:border-box; }
 
+/* Lo que se marca como oculto se oculta, aunque la clase diga otra cosa */
+[hidden]{ display:none !important; }
+
 html{ scroll-behavior:smooth; background:var(--espacio); color-scheme:dark; }
 
 body{
@@ -396,6 +399,101 @@ body.borrador .foto-portada::after{ display:none; }
 }
 .tarjeta-apagada .precio{ color:var(--texto-tenue); }
 
+/* ============================================================
+   Tienda
+   ============================================================ */
+
+/* Foto del producto, arriba de la tarjeta */
+.producto-foto{
+  margin:-30px -30px 22px;
+  border-radius:18px 18px 0 0;
+  background:#fff;
+  height:230px;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.producto-foto img{
+  width:100%; height:100%;
+  object-fit:contain;
+  padding:18px;
+}
+
+/* Caja donde se arma el pedido */
+.caja-pedido{
+  background:var(--superficie); border:1px solid var(--borde);
+  border-radius:var(--radio); padding:30px; box-shadow:var(--sombra);
+  backdrop-filter:blur(6px);
+}
+.pedido-vacio{ color:var(--texto-tenue); margin:0; text-align:center; padding:14px 0; }
+
+.linea-pedido{
+  display:grid; grid-template-columns:1fr auto auto;
+  gap:16px; align-items:center;
+  padding:16px 0; border-bottom:1px solid var(--borde);
+}
+.linea-pedido:first-child{ padding-top:0; }
+.linea-nombre{ color:var(--tinta); font-weight:600; font-size:.98rem; line-height:1.35; }
+.linea-nombre span{
+  display:block; font-weight:400; font-size:.83rem; color:var(--texto-tenue); margin-top:3px;
+}
+.linea-cantidad{ display:flex; align-items:center; gap:4px; }
+.linea-cantidad button{
+  width:32px; height:32px; border-radius:50%;
+  background:rgba(255,255,255,.07); border:1px solid var(--borde);
+  color:var(--tinta); font-size:1.1rem; line-height:1; cursor:pointer;
+  transition:background .16s ease, border-color .16s ease;
+}
+.linea-cantidad button:hover{ background:var(--azul-tenue); border-color:var(--azul-claro); }
+.linea-cantidad span{
+  min-width:30px; text-align:center; font-weight:700; color:var(--tinta);
+  font-variant-numeric:tabular-nums;
+}
+.linea-subtotal{
+  font-family:var(--serif); font-size:1.1rem; color:var(--tinta);
+  min-width:88px; text-align:right; font-variant-numeric:tabular-nums;
+}
+
+.nota-digital{
+  margin:20px 0 0; font-size:.9rem; color:var(--texto-tenue);
+  background:var(--azul-tenue); border-radius:var(--radio-sm); padding:14px 16px;
+}
+
+.sumas{ margin-top:24px; border-top:1px solid var(--borde); padding-top:18px; }
+.fila-suma{
+  display:flex; justify-content:space-between; align-items:baseline;
+  padding:7px 0; font-size:.97rem;
+}
+.fila-suma strong{ color:var(--tinta); font-variant-numeric:tabular-nums; }
+.fila-total{
+  border-top:1px solid var(--borde); margin-top:10px; padding-top:16px;
+  font-size:1.05rem;
+}
+.fila-total strong{ font-family:var(--serif); font-size:1.55rem; font-weight:500; }
+
+.btn[disabled]{
+  opacity:.45; cursor:not-allowed; box-shadow:none;
+}
+.btn[disabled]:hover{ transform:none; background:var(--azul); }
+
+.enlace-suave{
+  background:none; border:0; padding:4px; cursor:pointer;
+  color:var(--texto-tenue); font-family:var(--sans); font-size:.88rem;
+  text-decoration:underline;
+}
+.enlace-suave:hover{ color:var(--azul-claro); }
+
+/* Barra flotante con el total del pedido */
+.barra-pedido{
+  position:fixed; left:20px; bottom:20px; z-index:70;
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--azul); color:#fff; text-decoration:none;
+  padding:14px 20px; border-radius:100px; font-weight:700; font-size:.94rem;
+  box-shadow:0 6px 24px rgba(47,107,255,.5);
+  transition:transform .16s ease;
+}
+.barra-pedido:hover{ transform:scale(1.04); }
+.barra-pedido svg{ width:19px; height:19px; }
+
 /* ---------- Pie ---------- */
 .pie{
   background:rgba(2,5,16,.86); color:var(--texto);
@@ -477,4 +575,14 @@ body.borrador .foto-portada::after{ display:none; }
   .formulario{ padding:26px 20px; }
   .wsp-flotante{ right:14px; bottom:14px; padding:13px 17px; font-size:.9rem; }
   .grupo-botones .btn{ flex:1 1 100%; }
+
+  /* Tienda */
+  .caja-pedido{ padding:22px 18px; }
+  .producto-foto{ margin:-30px -30px 20px; height:200px; }
+  .linea-pedido{ grid-template-columns:1fr auto; row-gap:10px; }
+  .linea-nombre{ grid-column:1 / -1; }
+  .linea-subtotal{ text-align:right; }
+  /* La barra del pedido y la de WhatsApp comparten el borde de abajo */
+  .barra-pedido{ left:14px; bottom:14px; padding:13px 16px; font-size:.88rem; }
+  .barra-pedido svg{ width:17px; height:17px; }
 }
