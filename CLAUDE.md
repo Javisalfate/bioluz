@@ -83,9 +83,29 @@ Pages** (Vercel no: su plan gratis prohíbe uso comercial).
 | Terapia | Precio |
 |---|---|
 | Sesión individual en camilla | $45.000 |
-| Sesión de biofrecuencias | $65.000 (mín. 3 sesiones, 1 a 2 h c/u) |
-| Meditación con cuencos del Tíbet | $30.000 por persona, desde 2 |
+| Biofrecuencias Clark/Rife | $65.000 (mín. 3 sesiones, 1 a 2 h c/u) |
+| Meditaciones Guiadas | $30.000 por persona, desde 2 |
 | Apiterapia | $20.000 |
+
+**Nombres de las terapias — van con mayúsculas.** Guillermo los mandó así
+el 6 de septiembre de 2026 y se escriben tal cual, como nombre propio:
+
+- **Biomagnetismo Médico con Bioenergética de Alta Integridad** — es lo
+  que se hace en la sesión individual en camilla
+- **Biofrecuencias** — bajada: *Clark/Rife, hasta 999.000 Hz*
+- **Meditaciones Guiadas** — bajada: *Con cuencos del Tíbet y de
+  cristales de cuarzo*. Javi decidió que los cuencos quedaran en la
+  bajada y no en el título: la gente los busca en Google, pero el
+  título tiene que ser el nombre que pidió Guillermo.
+- **Apiterapia**
+- **Terapias Complementarias/Alternativas** — no es una sección ni un
+  título de la web. Es solo que, si esas palabras llegan a aparecer,
+  van con mayúscula.
+
+Ojo con “Médico”: lo pidió el cliente y es el nombre real de la técnica
+(Par Biomagnético Médico, de Isaac Goiz). Aun así, en la web tiene que
+seguir siempre acompañado del aviso de que no reemplaza atención médica
+y de que Guillermo no es médico. No sacar esos avisos.
 
 **Cabañas: cerradas.** Los precios ($135.000 / $85.000 / $45.000) están
 en la web como referencia, marcados “No disponible por ahora”, con lista

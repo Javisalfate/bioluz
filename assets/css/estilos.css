@@ -112,6 +112,13 @@ a{ color:var(--azul-claro); }
 
 .intro{ font-size:1.1rem; color:var(--texto); max-width:62ch; }
 
+/* Bajada de un título: el nombre técnico o el detalle que va debajo del h2 */
+.subtitulo{
+  font-family:var(--sans); font-size:1rem; font-weight:600;
+  color:var(--azul-claro); max-width:48ch;
+  margin:-.35em 0 1.15em;
+}
+
 .etiqueta{
   display:inline-block; font-family:var(--sans); font-size:.73rem; font-weight:700;
   letter-spacing:.17em; text-transform:uppercase; color:var(--azul-claro);
