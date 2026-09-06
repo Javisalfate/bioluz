@@ -1,136 +1,140 @@
-# Web nueva de Bioluz Chile
+# Web de Bioluz Chile
 
-Todo lo que necesitas saber para entender esta carpeta, en simple.
+Todo lo que necesitas saber de esta carpeta, en simple.
+
+---
+
+## Los links
+
+| | |
+|---|---|
+| **La web publicada** | https://javisalfate.github.io/bioluz/ |
+| Los archivos en GitHub | https://github.com/Javisalfate/bioluz |
+| Maqueta para el cliente | el artifact de Claude, mismo link de siempre |
+
+El primero es el que le mandas a Guillermo. Siempre muestra lo último.
+
+**Para verla en tu computador:** doble clic en `index.html`.
 
 ---
 
 ## Qué hay acá
 
-Seis páginas listas:
+Siete páginas:
 
 | Archivo | Qué es |
 |---|---|
-| `index.html` | La portada (inicio) |
-| `terapias.html` | Las terapias en detalle y los precios |
-| `seminarios.html` | El diplomado y los seminarios |
+| `index.html` | La portada |
+| `terapias.html` | Las terapias y los precios |
+| `tienda.html` | La tienda con el carrito |
+| `seminarios.html` | El diplomado |
 | `centro.html` | El lugar, el domo y Guillermo |
-| `cabanas.html` | Los tres alojamientos |
+| `cabanas.html` | Los alojamientos (hoy cerrados) |
 | `contacto.html` | Contacto y reserva |
 
-Y una carpeta `assets` con:
+Y la carpeta `assets`:
 
-- `assets/css/estilos.css` — cómo se ve todo (colores, letras, tamaños)
-- `assets/js/main.js` — cómo funciona el menú del celular y el formulario
-- `assets/img/` — acá van las fotos (todavía está vacía)
+- `assets/css/estilos.css` — cómo se ve todo
+- `assets/js/main.js` — las estrellas, el menú del celular, el formulario
+- `assets/js/tienda.js` — el carrito
+- `assets/img/` — las fotos
 
-**Para verla:** haz doble clic en `index.html`. Se abre en el navegador,
-sin instalar nada.
+**`CLAUDE.md`** es para Claude, no para ti. Ahí están anotadas las
+decisiones del proyecto para que no se le olviden entre conversaciones.
 
 ---
 
 ## Modo borrador
 
-Mientras no haya fotos reales, cada espacio donde va una imagen muestra un
-cartelito que dice qué foto tiene que ir ahí y de qué tamaño.
+Donde todavía falta una foto aparece un cartelito diciendo qué foto va
+ahí y de qué tamaño. Eso se llama modo borrador.
 
-Eso se llama **modo borrador**. Cuando estén todas las fotos puestas, se
-quita: en cada archivo `.html`, en la línea que dice
-
-```
-<body class="borrador">
-```
-
-se borra la parte `class="borrador"` y queda `<body>`. Listo, desaparecen
-los cartelitos.
+Cuando estén todas las fotos, se quita: en cada archivo `.html`, donde
+dice `<body class="borrador">` se borra `class="borrador"` y queda
+`<body>`.
 
 ---
 
-## Fotos que hay que conseguir
+## Fotos que faltan
 
-Las guardas dentro de `assets/img/`. Formato `.jpg`, y ojalá no más pesadas
-que 500 KB cada una para que la web cargue rápido.
-
-**La más importante de todas:**
-
-- `portada.jpg` — la foto grande del inicio. Tiene que mostrar el lugar:
-  el domo, los cerros o el valle. Horizontal, mínimo 1920 px de ancho.
-  Esta es la única que ya está conectada por nombre: apenas la pongas con
-  ese nombre exacto, aparece sola en la portada.
-
-**El resto** están descritas una por una en los cartelitos de cada página.
-En resumen, lo que hace falta:
+Van en `assets/img/`, en `.jpg`, ojalá bajo 400 KB cada una.
 
 1. El domo por dentro, con los cuencos
 2. El domo por fuera, con los cerros
 3. Retrato de Guillermo
-4. La camilla del centro, ordenada y con buena luz
-5. Los cuencos vistos de cerca
-6. El pueblo de Alcohuaz o el valle, de día
+4. La camilla ordenada, con buena luz
+5. Los cuencos de cerca
+6. Alcohuaz o el valle, de día
 7. Cielo estrellado de noche
-8. Las cabañas y la casa, por fuera
-9. Las cabañas por dentro (cocina, chimenea, el mandala del piso)
+8. Las cabañas y la casa por fuera
+9. Las cabañas por dentro
 10. Un seminario en curso, con alumnos
 11. El agua o el río del valle
+
+La de portada ya está puesta.
+
+**Cuando tengas fotos nuevas:** déjalas en la carpeta con cualquier
+nombre y avísame. Yo las comprimo, las pongo donde van y las subo.
 
 ---
 
 ## Cómo funciona la reserva
 
-No hay ningún sistema complicado detrás. Cuando alguien llena el formulario
-y aprieta "Enviar por WhatsApp":
+La persona llena el formulario, y la web arma sola un mensaje ordenado
+que se abre en WhatsApp con todos sus datos. Ella lo revisa y lo manda.
 
-1. La web arma sola un mensaje ordenado con todos sus datos
-2. Se le abre WhatsApp con ese mensaje ya escrito
-3. La persona lo revisa y lo manda al teléfono de Bioluz
+No hay ningún sistema detrás, no cuesta nada al mes y no se cae.
 
-Ventajas: no se pierde ninguna consulta, llega todo al teléfono de siempre,
-no hay que pagar ningún servicio extra y no se cae nunca.
+---
 
-Si más adelante quieren un calendario con horas disponibles y pago online,
-se puede agregar. Por ahora esto resuelve el objetivo, que es llenar la
-agenda.
+## Cómo funciona la tienda
+
+**Por ahora es un ejemplo.** Los tres productos, los precios y los
+costos de despacho son inventados para que Guillermo vea cómo queda.
+
+El carrito sí funciona de verdad: agrega productos, cambia cantidades,
+calcula el despacho y guarda el pedido si cierras la página.
+
+El botón "Pagar en línea" está apagado hasta que exista la cuenta de
+Mercado Pago. Mientras tanto, el pedido se manda armado por WhatsApp.
+
+**Para que sea una tienda real falta:** la lista de productos de verdad,
+los costos de despacho reales, que Guillermo abra Mercado Pago, y mover
+la web a Netlify (gratis) para que pueda cobrar.
 
 ---
 
 ## Si cambia el teléfono o el correo
 
-En `assets/js/main.js`, arriba del todo, están estas dos líneas:
+En `assets/js/main.js`, arriba del todo:
 
 ```
 whatsapp: '56961580539',
 correo:   'contacto@bioluz.cl'
 ```
 
-Se cambian ahí y el formulario queda actualizado en todas las páginas.
-
-(Ojo: los botones verdes de WhatsApp que están sueltos en las páginas tienen
-el número escrito dentro del `.html`. Si cambia el número, avísame y lo
-reemplazo en todos lados de una vez.)
+Se cambian ahí. (Los botones verdes sueltos tienen el número escrito
+dentro de cada `.html`; si cambia, avísame y lo reemplazo en todos.)
 
 ---
 
 ## Sobre los textos de salud
 
 La web anterior decía que se trataban VIH, cáncer, diabetes y epilepsia.
-Eso se cambió a propósito: ahora se habla de **acompañamiento complementario
-al bienestar**, sin nombrar enfermedades ni prometer curación.
+Eso se cambió a propósito: ahora se habla de **acompañamiento
+complementario al bienestar**, sin nombrar enfermedades ni prometer
+curación.
 
-Dos razones:
-
-- En Chile, prometer curar enfermedades sin ser profesional de la salud
-  registrado puede traer problemas con la Seremi de Salud y con el Sernac.
-- Alguien con una enfermedad grave podría postergar su tratamiento médico
-  por leerlo.
-
-Cada página tiene además una nota al pie diciendo que las terapias no
-reemplazan la atención médica.
+Dos razones: en Chile prometer curar sin ser profesional de la salud
+registrado trae problemas con la Seremi y el Sernac, y alguien con una
+enfermedad grave podría postergar su tratamiento médico por leerlo.
 
 ---
 
 ## Lo que falta decidir
 
-- Logo (por ahora el nombre está escrito con la tipografía del sitio)
-- Si se mantiene el dominio bioluz.cl
-- Dónde se va a subir la web
-- Si quieren agregar reseñas de personas que ya han ido — eso ayuda mucho
-  a que reserven
+- Logo (hoy el nombre va escrito con la tipografía del sitio)
+- Si la web va a ser autoadministrable
+- Cuándo apuntar bioluz.cl a la web nueva — eso va al final, porque en
+  cuanto se cambia, la web vieja deja de verse
+- Reseñas de gente que ya fue: es lo que más ayudaría a que reserven
