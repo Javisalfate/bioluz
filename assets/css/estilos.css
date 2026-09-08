@@ -292,6 +292,26 @@ body.borrador .foto-portada,
 /* Como ya hay foto de verdad, esta no lleva el cartelito del borrador */
 body.borrador .foto-portada::after{ display:none; }
 
+/* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
+.galeria-dos{ display:grid; gap:16px; }
+.galeria-dos .foto{ min-height:207px; }
+.foto-meditacion-1,
+body.borrador .foto-meditacion-1{
+  background-image:
+    url('../img/meditacion-1.png'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+}
+.foto-meditacion-2,
+body.borrador .foto-meditacion-2{
+  background-image:
+    url('../img/meditacion-2.png'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+}
+body.borrador .foto-meditacion-1::after,
+body.borrador .foto-meditacion-2::after{ display:none; }
+
 /* ---------- Bloque partido (foto + texto) ---------- */
 .partido{
   display:grid; grid-template-columns:1fr 1fr; gap:54px; align-items:center;
