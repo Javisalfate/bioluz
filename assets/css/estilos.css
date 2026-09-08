@@ -282,7 +282,7 @@ body.borrador .foto-portada,
 .foto-portada{
   min-height:490px;
   background-image:
-    url('../img/portada.jpg'),
+    url('../img/portada.png'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
   /* Encuadre: el domo está a la derecha y arriba, así que corremos
