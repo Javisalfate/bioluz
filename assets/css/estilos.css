@@ -294,9 +294,15 @@ body.borrador .foto-portada::after{ display:none; }
 
 /* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
 .galeria-dos{ display:grid; gap:16px; }
-.galeria-dos .foto{ min-height:207px; }
+/* Cada caja mide igual que su foto real para que se vea completa,
+   sin recortar. La del domo (vertical) sí se recorta a propósito
+   arriba, hasta donde empiezan las ventanas: el techo vacío no
+   aporta nada y así se ve más de lo importante. */
+.galeria-dos .foto{ min-height:0; }
 .foto-meditacion-1,
 body.borrador .foto-meditacion-1{
+  aspect-ratio: 4 / 3;
+  background-position:center bottom;
   background-image:
     url('../img/meditacion-1.png'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
@@ -304,6 +310,7 @@ body.borrador .foto-meditacion-1{
 }
 .foto-meditacion-2,
 body.borrador .foto-meditacion-2{
+  aspect-ratio: 4 / 3;
   background-image:
     url('../img/meditacion-2.png'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
