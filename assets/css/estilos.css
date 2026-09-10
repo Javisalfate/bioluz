@@ -533,6 +533,35 @@ body.borrador .foto-meditacion-2::after{ display:none; }
 }
 .tarjeta-apagada .precio{ color:var(--texto-tenue); }
 
+/* ---------- Maqueta de calendario (vista previa, todavía no funciona) ---------- */
+.calendario-maqueta{
+  background:var(--superficie); border:1px solid var(--borde);
+  border-radius:var(--radio); padding:26px; max-width:420px;
+}
+.calendario-grilla{ display:grid; grid-template-columns:repeat(7,1fr); gap:6px; }
+.calendario-dia{
+  display:flex; align-items:center; justify-content:center;
+  aspect-ratio:1; border-radius:8px; font-size:.82rem; color:var(--texto);
+  background:rgba(255,255,255,.04);
+}
+.calendario-nombre{
+  background:none; color:var(--texto-tenue); font-weight:700; font-size:.7rem;
+  text-transform:uppercase;
+}
+.calendario-dia-vacio{ background:none; }
+.calendario-dia-ocupado{
+  background:rgba(255,255,255,.07); color:var(--texto-tenue);
+  text-decoration:line-through; text-decoration-color:rgba(146,182,255,.3);
+}
+.calendario-dia-libre{ background:var(--azul-tenue); color:var(--azul-claro); }
+.calendario-leyenda{
+  display:flex; gap:22px; margin-top:18px; font-size:.82rem; color:var(--texto-tenue);
+}
+.calendario-leyenda span{ display:inline-flex; align-items:center; gap:7px; }
+.calendario-punto{ width:10px; height:10px; border-radius:50%; display:inline-block; }
+.calendario-punto-libre{ background:var(--azul-claro); }
+.calendario-punto-ocupado{ background:rgba(255,255,255,.2); }
+
 /* ============================================================
    Tienda
    ============================================================ */

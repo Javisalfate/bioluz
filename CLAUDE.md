@@ -61,13 +61,40 @@ postergue su tratamiento.
 Sí se usa “terapias medicinales y holísticas” — lo pidió Guillermo y no
 hay problema mientras no se junte con nombres de enfermedades.
 
-**Reservas.** Van por WhatsApp: el formulario arma solo el mensaje y lo
-abre. No hay calendario ni pago online, y por ahora está bien así
-porque Guillermo confirma disponibilidad conversando.
+**Reservas.** Hoy van por WhatsApp: el formulario arma solo el mensaje y
+lo abre. Javi confirmó (10 de septiembre de 2026) que esto va a cambiar:
+el mismo formulario va a cobrar un **abono del 40% del valor de la
+terapia** con Mercado Pago antes de confirmar la hora — así se evita
+que alguien reserve y no llegue. Falta implementarlo: depende de que
+Guillermo abra su cuenta de Mercado Pago (la crea Javi, él es el
+titular) y de mudar el hosting (ver abajo).
 
-**Hosting.** GitHub Pages mientras la web sea estática. Cuando se
-conecte el pago del carrito hay que mover a **Netlify o Cloudflare
-Pages** (Vercel no: su plan gratis prohíbe uso comercial).
+**Hosting.** GitHub Pages mientras la web sea estática. Decisión tomada
+(10 de septiembre de 2026): cuando se conecte el pago, la web se muda a
+**Netlify**. Se descartó Cloudflare Pages (igual de gratis y también
+permite uso comercial, pero Netlify es más simple de manejar para
+alguien sin conocimientos técnicos) y Vercel (su plan gratis prohíbe uso
+comercial). El flujo de publicar con git no cambia.
+
+**bioluz.cl (la web vieja).** Hoy está alojada en **iHosting.cl**
+(hosting chileno, Viña del Mar) — confirmado el 10 de septiembre de 2026
+revisando el DNS. Es casi seguro que ese hosting se paga (iHosting es
+comercial, no gratis); una vez que la web nueva reemplace a la vieja, se
+puede dar de baja porque el sitio nuevo es HTML puro y no necesita el
+PHP/base de datos que da iHosting (eso es lo que usa Contao, la web
+vieja).
+
+⚠️ **Ojo con el dominio.** Revisé el registro en NIC Chile (WHOIS de
+`.cl`) el 10 de septiembre de 2026: el titular registrado es
+**"en representación de Guillermo Salfate (Julian Rene Bahamonde
+Cortes)"** — o sea, el dominio no está a nombre de Guillermo
+directamente, sino de alguien que lo representa (probablemente quien le
+hizo la web vieja). Vence el 26 de mayo de 2029, no hay apuro por
+renovarlo. Pero para el pendiente 5 (apuntar el dominio a la web nueva)
+van a necesitar entrar a la cuenta de NIC Chile, y eso depende de esa
+persona — falta confirmar con Guillermo si tiene esos accesos o si hay
+que contactar a Julian Bahamonde. Mejor resolverlo con tiempo, no
+cuando ya estén listos para hacer el cambio.
 
 ---
 
@@ -159,14 +186,29 @@ medida es tal, medirlo en el navegador o leer el archivo.
    por dentro y por fuera, un seminario en curso. La lista completa con
    medidas está en los cartelitos de cada página.
 2. **Textos** que Guillermo iba a mandar por escrito.
-3. **Tienda real** — lista de productos, costos de despacho de verdad,
-   cuenta de Mercado Pago abierta, carrito conectado al pago, mudanza a
-   Netlify.
+3. **Tienda real y pago online** — lista de productos, costos de despacho
+   de verdad, cuenta de Mercado Pago abierta (la crea Javi, Guillermo es
+   el titular), carrito conectado al pago, mudanza a Netlify. La misma
+   pasarela cobra también el **abono del 40% de las terapias** desde el
+   formulario de reserva (ver "Reservas" arriba) — confirmado por Javi el
+   10 de septiembre de 2026.
 4. **Decidir si la web será autoadministrable** (Decap o Sveltia CMS,
    gratis). Antes hay que preguntarle a Guillermo si de verdad la va a
    usar.
-5. **Apuntar bioluz.cl** a GitHub Pages. Esto va al final: en cuanto se
-   cambia, la web vieja deja de verse.
+5. **Apuntar bioluz.cl** a la web nueva (Netlify, una vez hecha la
+   mudanza). Hoy el dominio vive en iHosting.cl — ahí hay que entrar a
+   cambiar los DNS. Esto va al final: en cuanto se cambia, la web vieja
+   deja de verse.
 6. **Página de Seminarios** dice que el alojamiento está incluido en el
    diplomado, pero las cabañas están cerradas. Hay que resolver esa
    contradicción con Guillermo.
+7. **Cabañas en Airbnb y Booking.com** — Guillermo ya tuvo presencia ahí
+   antes y quiere volver a estar. No hace falta pagar ninguna app: ambas
+   plataformas dan gratis un link de calendario (iCal) para sincronizar
+   fechas entre ellas y con la web, sin contrato de por medio (se
+   actualiza cada 2 a 6 horas, no al instante — para 1 a 3 cabañas es
+   suficiente). Javi confirmó (10 de septiembre de 2026): se resuelve
+   recién cuando las cabañas reabran. Mientras tanto, en
+   `cabanas.html` ya quedó una **maqueta visual del calendario de
+   reservas** (no funciona, es solo para mostrar la idea) debajo de las
+   tres fichas de cabañas.
