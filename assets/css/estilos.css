@@ -352,6 +352,38 @@ body.borrador .foto-domo-fotos,
 }
 body.borrador .foto-domo-fotos::after{ display:none; }
 
+/* Foto del valle con cielo limpio, en El entorno (centro.html) */
+body.borrador .foto-cielo-limpio,
+.foto-cielo-limpio{
+  background-image:
+    url('../img/cielo-limpio.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-cielo-limpio::after{ display:none; }
+
+/* Fotos del valle, en Dónde estamos (index.html) */
+body.borrador .foto-ultimo-pueblo-1,
+.foto-ultimo-pueblo-1{
+  background-image:
+    url('../img/ultimo-pueblo-1.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-ultimo-pueblo-1::after{ display:none; }
+
+body.borrador .foto-ultimo-pueblo-2,
+.foto-ultimo-pueblo-2{
+  background-image:
+    url('../img/ultimo-pueblo-2.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-ultimo-pueblo-2::after{ display:none; }
+
 /* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
 .galeria-dos{ display:grid; gap:16px; }
 /* Las dos se recortan arriba a propósito: la del domo hasta donde
