@@ -330,6 +330,17 @@ body.borrador .foto-centro-fotos,
 }
 body.borrador .foto-centro-fotos::after{ display:none; }
 
+/* Foto de los cuencos, en Meditaciones Guiadas de terapias.html */
+body.borrador .foto-cuencos-meditacion,
+.foto-cuencos-meditacion{
+  background-image:
+    url('../img/cuencos-meditacion.png'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center 55%;
+}
+body.borrador .foto-cuencos-meditacion::after{ display:none; }
+
 /* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
 .galeria-dos{ display:grid; gap:16px; }
 /* Las dos se recortan arriba a propósito: la del domo hasta donde
