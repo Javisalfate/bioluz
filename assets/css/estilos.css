@@ -282,7 +282,7 @@ body.borrador .foto-portada,
 .foto-portada{
   min-height:490px;
   background-image:
-    url('../img/portada.png'),
+    url('../img/portada.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
   /* Encuadre: el domo está a la derecha y arriba, así que corremos
@@ -301,7 +301,7 @@ body.borrador .foto-guillermo{
   min-height:0;
   aspect-ratio: 1086 / 1230;
   background-image:
-    url('../img/guillermo.png'),
+    url('../img/guillermo.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
   background-position:center;
@@ -312,7 +312,7 @@ body.borrador .foto-guillermo::after{ display:none; }
 body.borrador .foto-biofrecuencias,
 .foto-biofrecuencias{
   background-image:
-    url('../img/biofrecuencias.png'),
+    url('../img/biofrecuencias.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
   background-position:center 30%;
@@ -323,7 +323,7 @@ body.borrador .foto-biofrecuencias::after{ display:none; }
 body.borrador .foto-centro-fotos,
 .foto-centro-fotos{
   background-image:
-    url('../img/centro-fotos.png'),
+    url('../img/centro-fotos.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
   background-position:center;
@@ -334,12 +334,23 @@ body.borrador .foto-centro-fotos::after{ display:none; }
 body.borrador .foto-cuencos-meditacion,
 .foto-cuencos-meditacion{
   background-image:
-    url('../img/cuencos-meditacion.png'),
+    url('../img/cuencos-meditacion.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
   background-position:center 55%;
 }
 body.borrador .foto-cuencos-meditacion::after{ display:none; }
+
+/* Cuadrícula de 4 fotos del domo, en El Templo de las Meditaciones (centro.html) */
+body.borrador .foto-domo-fotos,
+.foto-domo-fotos{
+  background-image:
+    url('../img/domo-fotos.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-domo-fotos::after{ display:none; }
 
 /* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
 .galeria-dos{ display:grid; gap:16px; }
@@ -352,7 +363,7 @@ body.borrador .foto-meditacion-1{
   aspect-ratio: 1.6;
   background-position:center 82%;
   background-image:
-    url('../img/meditacion-1.png'),
+    url('../img/meditacion-1.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
 }
@@ -361,7 +372,7 @@ body.borrador .foto-meditacion-2{
   aspect-ratio: 1.87;
   background-position:center bottom;
   background-image:
-    url('../img/meditacion-2.png'),
+    url('../img/meditacion-2.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
     linear-gradient(145deg, #12224F 0%, #0A1130 100%);
 }
