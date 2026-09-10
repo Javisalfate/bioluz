@@ -308,6 +308,28 @@ body.borrador .foto-guillermo{
 }
 body.borrador .foto-guillermo::after{ display:none; }
 
+/* Foto de una sesión de Biofrecuencias, en terapias.html */
+body.borrador .foto-biofrecuencias,
+.foto-biofrecuencias{
+  background-image:
+    url('../img/biofrecuencias.png'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center 30%;
+}
+body.borrador .foto-biofrecuencias::after{ display:none; }
+
+/* Franja con 4 fotos del centro, portada de centro.html */
+body.borrador .foto-centro-fotos,
+.foto-centro-fotos{
+  background-image:
+    url('../img/centro-fotos.png'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-centro-fotos::after{ display:none; }
+
 /* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
 .galeria-dos{ display:grid; gap:16px; }
 /* Las dos se recortan arriba a propósito: la del domo hasta donde
