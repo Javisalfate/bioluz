@@ -96,12 +96,19 @@ persona — falta confirmar con Guillermo si tiene esos accesos o si hay
 que contactar a Julian Bahamonde. Mejor resolverlo con tiempo, no
 cuando ya estén listos para hacer el cambio.
 
-Javi habló con Julian Bahamonde el 11 de septiembre de 2026: él dice
-que no tiene bioluz.cl "en sus dominios" (o sea, en su cuenta NIC no le
-aparece). Esto no contradice lo de arriba — el nombre en el WHOIS es
-solo el contacto administrativo que quedó registrado en 2008, no
-prueba que exista hoy una cuenta NIC activa a su nombre. Falta que
-Julian confirme entrando a nic.cl con el RUT de Guillermo.
+Javi habló con Julian Bahamonde el 11 de septiembre de 2026: dijo que
+no tiene bioluz.cl "en sus dominios" (en su cuenta NIC no le aparece).
+Luego, ese mismo día, Julian ya revisó su NIC y **confirmó que no está
+ahí** — así que no es su cuenta la que hay que usar. Sigue sin
+saberse de quién es la cuenta NIC bajo la que quedó inscrito en 2008.
+
+Siguiente paso sugerido: como el dominio se compró junto con el
+hosting viejo, es bastante probable que **iHosting.cl** lo haya
+registrado a nombre de Guillermo con su RUT (práctica común de los
+hostings chilenos). Vale la pena que Javi o Guillermo escriban a
+soporte de iHosting preguntando si ellos administran el dominio, y en
+paralelo probar en nic.cl la opción de recuperar clave usando el RUT
+de Guillermo, por si la cuenta quedó a su nombre sin que él lo supiera.
 
 Julian también dijo algo importante: que renovar/pagar el dominio "le
 sirve" solo si Bioluz sigue usando el mismo hosting (iHosting) —
