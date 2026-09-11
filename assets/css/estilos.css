@@ -334,6 +334,8 @@ body.borrador .foto-centro-fotos::after{ display:none; }
 body.borrador .foto-apiterapia,
 .foto-apiterapia{
   aspect-ratio: 1024 / 1536;
+  width:80%;
+  margin:0 auto;
   background-image:
     url('../img/apiterapia.jpg'),
     repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
