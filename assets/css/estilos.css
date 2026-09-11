@@ -330,6 +330,18 @@ body.borrador .foto-centro-fotos,
 }
 body.borrador .foto-centro-fotos::after{ display:none; }
 
+/* Foto de la camilla, en Sesión individual de terapias.html */
+body.borrador .foto-camilla,
+.foto-camilla{
+  aspect-ratio: 1084 / 1451;
+  background-image:
+    url('../img/camilla.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-camilla::after{ display:none; }
+
 /* Foto de los cuencos y el Gong Atlantic (una sola imagen con las dos
    fotos juntas), en Meditaciones Guiadas de terapias.html */
 body.borrador .foto-cuencos-y-gong,
