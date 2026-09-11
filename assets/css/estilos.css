@@ -330,6 +330,18 @@ body.borrador .foto-centro-fotos,
 }
 body.borrador .foto-centro-fotos::after{ display:none; }
 
+/* Foto de la aplicación de Apiterapia, en terapias.html */
+body.borrador .foto-apiterapia,
+.foto-apiterapia{
+  aspect-ratio: 1024 / 1536;
+  background-image:
+    url('../img/apiterapia.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-apiterapia::after{ display:none; }
+
 /* Foto de la camilla, en Sesión individual de terapias.html */
 body.borrador .foto-camilla,
 .foto-camilla{
