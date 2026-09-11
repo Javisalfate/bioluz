@@ -96,6 +96,21 @@ persona — falta confirmar con Guillermo si tiene esos accesos o si hay
 que contactar a Julian Bahamonde. Mejor resolverlo con tiempo, no
 cuando ya estén listos para hacer el cambio.
 
+Javi habló con Julian Bahamonde el 11 de septiembre de 2026: él dice
+que no tiene bioluz.cl "en sus dominios" (o sea, en su cuenta NIC no le
+aparece). Esto no contradice lo de arriba — el nombre en el WHOIS es
+solo el contacto administrativo que quedó registrado en 2008, no
+prueba que exista hoy una cuenta NIC activa a su nombre. Falta que
+Julian confirme entrando a nic.cl con el RUT de Guillermo.
+
+Julian también dijo algo importante: que renovar/pagar el dominio "le
+sirve" solo si Bioluz sigue usando el mismo hosting (iHosting) —
+sugiere que tiene algún arreglo comercial atado al hosting, no solo al
+dominio. Como ya está decidido mudarse a Netlify (ver "Hosting" abajo),
+esto puede significar que Julian no vaya a colaborar con el dominio una
+vez que dejen iHosting. Aclarar con Guillermo qué acuerdo tiene con
+Julian antes de llegar al pendiente 5.
+
 ---
 
 ## Datos duros
