@@ -219,6 +219,13 @@ a{ color:var(--azul-claro); }
 .rejilla-3{ grid-template-columns:repeat(3,1fr); }
 .rejilla-4{ grid-template-columns:repeat(4,1fr); }
 
+/* Instagram: cada publicación necesita mínimo 326px, no caben 4 por fila */
+.rejilla-instagram{
+  grid-template-columns:repeat(2,1fr);
+  max-width:900px; margin:0 auto;
+}
+.rejilla-instagram iframe{ margin:0 auto !important; }
+
 /* ---------- Tarjetas ---------- */
 .tarjeta{
   background:var(--superficie); border:1px solid var(--borde); border-radius:var(--radio);
