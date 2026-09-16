@@ -412,6 +412,18 @@ body.borrador .foto-ultimo-pueblo-2,
 }
 body.borrador .foto-ultimo-pueblo-2::after{ display:none; }
 
+/* Foto de un seminario en curso, en seminarios.html */
+body.borrador .foto-curso,
+.foto-curso{
+  aspect-ratio: 1254 / 1254;
+  background-image:
+    url('../img/curso.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-curso::after{ display:none; }
+
 /* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
 .galeria-dos{ display:grid; gap:16px; }
 /* Las dos se recortan arriba a propósito: la del domo hasta donde
