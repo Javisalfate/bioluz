@@ -69,6 +69,17 @@ que alguien reserve y no llegue. Falta implementarlo: depende de que
 Guillermo abra su cuenta de Mercado Pago (la crea Javi, él es el
 titular) y de mudar el hosting (ver abajo).
 
+Mientras tanto (confirmado por Javi el 17 de septiembre de 2026): las
+reservas de terapias y de ceremonias de cuencos para grupos siguen
+siendo 100% por WhatsApp, sin cobro automático — el abono se coordina
+directo con Guillermo. Pero para que nadie se entere recién al final,
+`terapias.html` ya muestra un aviso antes del formulario avisando que
+hay que abonar a lo menos el 40% para confirmar la hora.
+
+Más adelante, con tiempo y sin apuro, se instala el cobro de ese abono
+por pasarela de pago (Mercado Pago) directo desde la web — recién ahí
+se reemplaza la coordinación manual por WhatsApp.
+
 **Hosting.** GitHub Pages mientras la web sea estática. Decisión tomada
 (10 de septiembre de 2026): cuando se conecte el pago, la web se muda a
 **Netlify**. Se descartó Cloudflare Pages (igual de gratis y también
