@@ -87,6 +87,16 @@ permite uso comercial, pero Netlify es más simple de manejar para
 alguien sin conocimientos técnicos) y Vercel (su plan gratis prohíbe uso
 comercial). El flujo de publicar con git no cambia.
 
+Javi decidió (17 de septiembre de 2026): **por ahora no se conecta
+Mercado Pago** — las reservas y la tienda se quedan como formulario
+hacia WhatsApp, sin pago en línea, hasta que se decida retomarlo. Como
+la mudanza a Netlify solo era necesaria para poder cobrar, **se saltó
+ese paso**: el dominio bioluz.cl se apunta directo a GitHub Pages (que
+sí soporta dominio propio sin cambiar de hosting). Para esto se agregó
+un archivo `CNAME` en la raíz del repositorio con `bioluz.cl` adentro.
+Si más adelante se retoma el pago online, ahí sí se evalúa mudar a
+Netlify.
+
 **bioluz.cl (la web vieja).** Hoy está alojada en **iHosting.cl**
 (hosting chileno, Viña del Mar) — confirmado el 10 de septiembre de 2026
 revisando el DNS. Se confirmó (17 de septiembre de 2026) que Guillermo
@@ -283,20 +293,28 @@ medida es tal, medirlo en el navegador o leer el archivo.
    mandar) y la foto del río/agua en Cabañas. La lista completa con
    medidas está en los cartelitos que van quedando en cada página.
 2. **Textos** que Guillermo iba a mandar por escrito.
-3. **Tienda real y pago online** — lista de productos, costos de despacho
-   de verdad, cuenta de Mercado Pago abierta (la crea Javi, Guillermo es
-   el titular), carrito conectado al pago, mudanza a Netlify. La misma
-   pasarela cobra también el **abono del 40% de las terapias** desde el
-   formulario de reserva (ver "Reservas" arriba) — confirmado por Javi el
-   10 de septiembre de 2026.
+3. **Tienda real y pago online** — en pausa. Javi decidió (17 de
+   septiembre de 2026) no conectar Mercado Pago por ahora: la tienda y
+   las reservas se quedan como formulario hacia WhatsApp. Cuando se
+   retome: lista de productos real, costos de despacho de verdad,
+   cuenta de Mercado Pago abierta (la crea Javi, Guillermo es el
+   titular), carrito conectado al pago, y ahí sí evaluar la mudanza a
+   Netlify. La misma pasarela cobraría también el **abono del 40% de
+   las terapias** desde el formulario de reserva (ver "Reservas"
+   arriba).
 4. **Decidir si la web será autoadministrable** (Decap o Sveltia CMS,
    gratis). Antes hay que preguntarle a Guillermo si de verdad la va a
    usar.
-5. **Apuntar bioluz.cl** a la web nueva (Netlify, una vez hecha la
-   mudanza). Confirmado (17 de septiembre de 2026): esto se hace desde
-   el panel de iHosting, en Dominios → Zone Editor, sin necesitar la
-   cuenta de NIC Chile. Esto va al final: en cuanto se cambia, la web
-   vieja deja de verse.
+5. **Apuntar bioluz.cl a la web nueva — en curso (17 de septiembre de
+   2026).** Como no se conecta Mercado Pago por ahora, se saltó la
+   mudanza a Netlify: se agregó el archivo `CNAME` (con `bioluz.cl`)
+   al repositorio para que GitHub Pages sirva directo en ese dominio.
+   Falta que Javi entre al panel de iHosting → Dominios → Zone Editor
+   y cambie el DNS de bioluz.cl para que apunte a GitHub Pages (4
+   registros A a las IPs de GitHub: 185.199.108.153, 185.199.109.153,
+   185.199.110.153 y 185.199.111.153). En cuanto se cambie, la web
+   vieja deja de verse — no hace falta la cuenta de NIC Chile para
+   esto, el registro sigue igual.
 6. **Página de Seminarios** dice que el alojamiento está incluido en el
    diplomado, pero las cabañas están cerradas. Hay que resolver esa
    contradicción con Guillermo.
