@@ -424,6 +424,78 @@ body.borrador .foto-curso,
 }
 body.borrador .foto-curso::after{ display:none; }
 
+/* Foto principal de cabanas.html: la torre del Cohete Poético de noche */
+body.borrador .foto-cabana-principal,
+.foto-cabana-principal{
+  background-image:
+    url('../img/cabana-cohete-2.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center 30%;
+}
+body.borrador .foto-cabana-principal::after{ display:none; }
+
+/* Foto de "La casa · para grupos" (con el Cohete Poético), en cabanas.html */
+body.borrador .foto-cabana-cohete,
+.foto-cabana-cohete{
+  background-image:
+    url('../img/cabana-cohete-1.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center 65%;
+}
+body.borrador .foto-cabana-cohete::after{ display:none; }
+
+/* Fotos de "Casa-cabaña grande", en cabanas.html: una principal y tres
+   chicas en la mini-galería debajo de la descripción */
+body.borrador .foto-cabana-grande-1,
+.foto-cabana-grande-1{
+  background-image:
+    url('../img/cabana-grande-1.jpg'),
+    repeating-linear-gradient(45deg, rgba(146,182,255,.05) 0 13px, transparent 13px 26px),
+    linear-gradient(145deg, #12224F 0%, #0A1130 100%);
+  background-position:center;
+}
+body.borrador .foto-cabana-grande-1::after{ display:none; }
+
+body.borrador .foto-cabana-grande-2,
+.foto-cabana-grande-2{ background-image:url('../img/cabana-grande-2.jpg'); background-position:center; }
+body.borrador .foto-cabana-grande-3,
+.foto-cabana-grande-3{ background-image:url('../img/cabana-grande-3.jpg'); background-position:center; }
+body.borrador .foto-cabana-grande-4,
+.foto-cabana-grande-4{ background-image:url('../img/cabana-grande-4.jpg'); background-position:center; }
+
+/* ---------- Mini-galería de fotos chicas dentro de una tarjeta ---------- */
+.mini-galeria{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:16px 0; }
+.mini-galeria .foto{ min-height:0; aspect-ratio:1; border-radius:10px; }
+.mini-galeria .foto::after,
+body.borrador .mini-galeria .foto::after{ display:none; }
+
+/* ---------- Ver una foto completa (lightbox) ----------
+   Se agrega solo a las fotos reales (main.js revisa cuáles tienen
+   imagen de verdad); las que todavía son solo cartelito no se abren. */
+.foto-clicable{ cursor:zoom-in; }
+.lightbox-fondo{
+  position:fixed; inset:0; z-index:200;
+  background:rgba(2,5,16,.92);
+  display:flex; align-items:center; justify-content:center;
+  padding:26px;
+}
+.lightbox-fondo[hidden]{ display:none; }
+.lightbox-imagen{
+  max-width:100%; max-height:100%;
+  border-radius:14px;
+  box-shadow:0 24px 70px rgba(0,0,0,.55);
+}
+.lightbox-cerrar{
+  position:fixed; top:18px; right:18px;
+  width:42px; height:42px; border-radius:100px;
+  background:rgba(4,8,28,.86); border:1px solid var(--borde-vivo);
+  color:var(--texto); font-size:1.4rem; line-height:1;
+  cursor:pointer;
+}
+.lightbox-cerrar:hover{ color:var(--azul-claro); }
+
 /* ---------- Galería de dos fotos (Ceremonias de cuencos) ---------- */
 .galeria-dos{ display:grid; gap:16px; }
 /* Las dos se recortan arriba a propósito: la del domo hasta donde

@@ -3,6 +3,7 @@
    1) El cielo estrellado del fondo
    2) Menú del celular
    3) Formulario de reserva -> WhatsApp o correo
+   4) Ver una foto completa al hacer clic (lightbox)
    ============================================================ */
 
 /* Datos de contacto en un solo lugar.
@@ -208,5 +209,68 @@ var BIOLUZ = {
                 '&body='    + encodeURIComponent(armarMensaje());
       window.location.href = url;
     });
+  }
+})();
+
+/* ------------------------------------------------------------
+   4) Ver una foto completa al hacer clic
+   Cada ".foto" que ya tiene una imagen real (no las que todavía son
+   solo un cartelito de "falta esta foto") se puede abrir en grande,
+   sin recorte, sobre un fondo oscuro.
+   ------------------------------------------------------------ */
+(function () {
+  var fotos = document.querySelectorAll('.foto');
+  if (!fotos.length) return;
+
+  var fondo = document.createElement('div');
+  fondo.className = 'lightbox-fondo';
+  fondo.hidden = true;
+  fondo.innerHTML =
+    '<button type="button" class="lightbox-cerrar" aria-label="Cerrar">&times;</button>' +
+    '<img class="lightbox-imagen" alt="">';
+  document.body.appendChild(fondo);
+  var imagenGrande = fondo.querySelector('.lightbox-imagen');
+
+  function abrir(url) {
+    imagenGrande.src = url;
+    fondo.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function cerrar() {
+    fondo.hidden = true;
+    imagenGrande.src = '';
+    document.body.style.overflow = '';
+  }
+
+  fondo.addEventListener('click', function (e) {
+    if (e.target === fondo || e.target.closest('.lightbox-cerrar')) cerrar();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') cerrar();
+  });
+
+  for (var i = 0; i < fotos.length; i++) {
+    (function (foto) {
+      // La foto de verdad siempre queda primera en background-image;
+      // si empieza con un degradado en vez de "url(", es solo el
+      // cartelito de borrador y no se abre.
+      var fondoCss = getComputedStyle(foto).backgroundImage;
+      var coincide = /^url\(["']?([^"')]+)["']?\)/.exec(fondoCss);
+      if (!coincide) return;
+      var urlFoto = coincide[1];
+
+      foto.classList.add('foto-clicable');
+      foto.setAttribute('role', 'button');
+      foto.setAttribute('tabindex', '0');
+      foto.setAttribute('aria-label', 'Ver foto completa');
+
+      foto.addEventListener('click', function () { abrir(urlFoto); });
+      foto.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          abrir(urlFoto);
+        }
+      });
+    })(fotos[i]);
   }
 })();

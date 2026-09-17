@@ -265,10 +265,12 @@ medida es tal, medirlo en el navegador o leer el archivo.
 
 ## Pendientes
 
-1. **Fotos que faltan** — el domo por dentro con los cuencos, retrato de
-   Guillermo, la camilla, el valle de día, cielo estrellado, las cabañas
-   por dentro y por fuera, un seminario en curso. La lista completa con
-   medidas está en los cartelitos de cada página.
+1. **Fotos que faltan.** La mayoría ya están puestas (domo, Guillermo,
+   camilla, cielo estrellado, seminario, y — 17 de septiembre de 2026 —
+   las fotos de "La casa · para grupos" y "Casa-cabaña grande" en
+   Cabañas). Falta: la foto de la "Cabaña para dos" (Javi la va a
+   mandar) y la foto del río/agua en Cabañas. La lista completa con
+   medidas está en los cartelitos que van quedando en cada página.
 2. **Textos** que Guillermo iba a mandar por escrito.
 3. **Tienda real y pago online** — lista de productos, costos de despacho
    de verdad, cuenta de Mercado Pago abierta (la crea Javi, Guillermo es
