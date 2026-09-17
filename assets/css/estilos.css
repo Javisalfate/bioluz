@@ -710,6 +710,8 @@ body.borrador .foto-meditacion-2::after{ display:none; }
   letter-spacing:.15em; text-transform:uppercase; margin:0 0 16px; }
 .pie ul{ list-style:none; padding:0; margin:0; }
 .pie li{ margin-bottom:10px; }
+.pie li a.enlace-icono{ display:inline-flex; align-items:center; gap:8px; }
+.pie li a.enlace-icono svg{ width:16px; height:16px; flex:none; }
 .pie-abajo{
   border-top:1px solid var(--borde); padding-top:26px;
   display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;

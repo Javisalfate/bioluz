@@ -78,11 +78,17 @@ comercial). El flujo de publicar con git no cambia.
 
 **bioluz.cl (la web vieja).** Hoy está alojada en **iHosting.cl**
 (hosting chileno, Viña del Mar) — confirmado el 10 de septiembre de 2026
-revisando el DNS. Es casi seguro que ese hosting se paga (iHosting es
-comercial, no gratis); una vez que la web nueva reemplace a la vieja, se
-puede dar de baja porque el sitio nuevo es HTML puro y no necesita el
-PHP/base de datos que da iHosting (eso es lo que usa Contao, la web
-vieja).
+revisando el DNS. Se confirmó (17 de septiembre de 2026) que Guillermo
+**paga ese hosting todos los años**, y ya pagó el ciclo de este año en
+marzo de 2026 — o sea, está pagado hasta marzo de 2027 más o menos. Una
+vez que la web nueva reemplace a la vieja, se puede dar de baja porque
+el sitio nuevo es HTML puro y no necesita el PHP/base de datos que da
+iHosting (eso es lo que usa Contao, la web vieja), pero no hay apuro
+mientras esté pagado.
+
+iHosting le escribió a Javi ofreciendo credenciales para subir ahí la
+web nueva. **No se va a usar** — ya está decidida la ruta GitHub Pages
+→ Netlify (ver "Hosting" arriba), y esas credenciales no se tocan.
 
 ⚠️ **Ojo con el dominio.** Revisé el registro en NIC Chile (WHOIS de
 `.cl`) el 10 de septiembre de 2026: el titular registrado es
@@ -117,6 +123,57 @@ dominio. Como ya está decidido mudarse a Netlify (ver "Hosting" abajo),
 esto puede significar que Julian no vaya a colaborar con el dominio una
 vez que dejen iHosting. Aclarar con Guillermo qué acuerdo tiene con
 Julian antes de llegar al pendiente 5.
+
+Javi volvió a hablar con Julian el 16 de septiembre de 2026: **reconfirmó
+que tampoco le aparece en su cuenta NIC.** Ese mismo día revisamos una
+cuenta de nic.cl abierta con el correo contacto@bioluz.cl: esa cuenta
+**no tiene ningún dominio adentro** (al entrar a "Mis dominios" manda
+directo a la pantalla de inscribir uno nuevo) — o sea, es una cuenta
+recién creada, no la de 2008, y no sirve para administrar bioluz.cl.
+El WHOIS sigue igual: titular "en representación de Guillermo Salfate
+(Julian Bahamonde)", NS todavía en ihosting.cl, vence 2029-05-26, con
+una modificación reciente el 24 de junio de 2026 (no se sabe qué la
+causó). La recuperación de clave en nic.cl **no tiene opción por RUT** — solo
+por correo registrado o por nombre de dominio (esto último manda el
+correo de recuperación a quien esté como Contacto Administrativo de
+ese dominio, sin mostrar cuál es esa dirección). El 16 de septiembre
+de 2026 se probó la opción "por nombre de dominio" con bioluz.cl:
+
+- El correo de recuperación **le llegó a Guillermo**, a su casilla de
+  contacto@bioluz.cl. Solo dejó cambiar la clave, no pidió pagar nada
+  (el dominio no está vencido, vence en 2029).
+- Pero al entrar con esa clave nueva a contacto@bioluz.cl, **bioluz.cl
+  sigue sin aparecer** en "Mis dominios".
+
+Conclusión: contacto@bioluz.cl no es el usuario real de NIC que tiene
+el dominio — aunque el aviso de recuperación llega a esa casilla de
+correo, la cuenta que se abre con esa clave es otra (probablemente la
+cuenta nueva y vacía que ya se había detectado antes). Ya se agotó lo
+que se puede hacer solo, desde el sitio de NIC.
+
+Javi le preguntó directo a iHosting (17 de septiembre de 2026): **ellos
+mismos confirmaron que solo administran el hosting, no el dominio.**
+Con esto se descarta la pista de que iHosting tuviera la cuenta NIC —
+ya se preguntó a las tres partes posibles (Julian Bahamonde dos veces,
+la cuenta contacto@bioluz.cl, y ahora iHosting) y ninguna es la dueña
+de la cuenta de 2008.
+
+🎉 **Buena noticia (17 de septiembre de 2026): esto ya no bloquea el
+pendiente 5.** iHosting le dio a Javi acceso a su panel de hosting, y
+ahí, en Dominios → **Zone Editor**, aparece bioluz.cl con sus registros
+DNS (A Record, CNAME Record, MX Record) editables. O sea: aunque nadie
+tiene la cuenta NIC de 2008, **no se necesita** para apuntar el dominio
+a la web nueva — el panel de iHosting ya tiene ese control, porque los
+nameservers de bioluz.cl siguen siendo los de iHosting. Cuando llegue
+el momento del pendiente 5, se entra ahí y se cambia el registro para
+que apunte a Netlify. No tocar nada de eso todavía — el dominio tiene
+que seguir apuntando a la web vieja hasta que la nueva esté lista y
+publicada en Netlify.
+
+Ya no es necesario seguir insistiendo con NIC Chile para este objetivo
+(el registro de "titular" ahí no cambia, pero no lo necesitamos para
+apuntar el dominio). Sí queda pendiente, sin apuro, entender de quién
+es esa cuenta NIC por prolijidad — pero deja de ser un bloqueo.
 
 ---
 
@@ -160,8 +217,13 @@ y de que Guillermo no es médico. No sacar esos avisos.
 en la web como referencia, marcados “No disponible por ahora”, con lista
 de espera. Se asumió que es temporal.
 
-**Tienda: es un ejemplo.** Los tres productos, precios y despachos son
-inventados para que el cliente los revise. Falta la lista real.
+**Tienda: pausada.** Javi pidió (17 de septiembre de 2026) sacar los
+tres productos de ejemplo (imanes, libro digital, vitamina D) y el
+carrito, porque todavía no hay lista real ni pago conectado. Por ahora
+`tienda.html` solo muestra "Próximamente..." — el menú sigue existiendo,
+pero sin contenido ni carrito. `tienda.js` quedó sin usar en esa página.
+Se vuelve a armar cuando haya lista real de productos y la cuenta de
+Mercado Pago esté lista (ver pendiente 3).
 
 ---
 
@@ -218,9 +280,10 @@ medida es tal, medirlo en el navegador o leer el archivo.
    gratis). Antes hay que preguntarle a Guillermo si de verdad la va a
    usar.
 5. **Apuntar bioluz.cl** a la web nueva (Netlify, una vez hecha la
-   mudanza). Hoy el dominio vive en iHosting.cl — ahí hay que entrar a
-   cambiar los DNS. Esto va al final: en cuanto se cambia, la web vieja
-   deja de verse.
+   mudanza). Confirmado (17 de septiembre de 2026): esto se hace desde
+   el panel de iHosting, en Dominios → Zone Editor, sin necesitar la
+   cuenta de NIC Chile. Esto va al final: en cuanto se cambia, la web
+   vieja deja de verse.
 6. **Página de Seminarios** dice que el alojamiento está incluido en el
    diplomado, pero las cabañas están cerradas. Hay que resolver esa
    contradicción con Guillermo.
