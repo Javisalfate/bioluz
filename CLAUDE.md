@@ -51,6 +51,45 @@ con lila.
 
 **Tipografías.** Newsreader para títulos, Karla para textos.
 
+**Instagram (@piscoelquisalud) — portadas de destacadas.** Paleta
+aprobada por Javi el 14 de octubre de 2026, sacada de los colores
+terrosos del feed (domo, piedra, cerro) con un puente a cada color del
+logo. Es distinta a la de la web (azul eléctrico) a propósito: la web
+es el cielo de noche, el Instagram es la tierra del valle.
+
+| Color | Hex | Uso |
+|---|---|---|
+| Terracota adobe | `#8A4B2C` | fondo |
+| Verde monstera | `#4E6B3A` | fondo |
+| Arena del valle | `#C8AE8C` | fondo (íconos en café `#3F261D`) |
+| Crema | `#F4EFE6` | íconos sobre terracota y verde |
+| Dorado llama | `#E9C35A` | solo para destacar (ícono de Reservas) |
+
+El azul del logo se dejó fuera a propósito: es el único color frío y
+rompe la armonía cálida del feed. Portadas: 1080×1920, fondo liso,
+ícono en **silueta rellena** (no de líneas: Javi lo pidió así porque
+las líneas se veían cargadas) al centro, sin texto. Terapias lleva una
+figura meditando en posición de loto, no haciendo yoga. Las 8 portadas
+listas están en `Fuera de la web/Instagram destacadas/` (el script que
+las genera está en la carpeta temporal de la sesión, `portadas/generar.ps1`).
+
+Destacadas en este orden (definido por Javi el 14 de octubre de 2026,
+los colores van alternando terracota → verde → arena):
+1. **Reservas** — terracota, calendario en dorado
+2. **Ubicación** — verde, pin de mapa
+3. **Contacto** — arena, globo de mensaje con tres puntitos
+4. **Reseñas** — terracota, estrella
+5. **Terapias** — verde, persona meditando en posición de loto
+6. **Cuencos** — arena, cuenco con baqueta
+7. **Par Imanes** — terracota, dos imanes redondos con mango (+ y −),
+   como los imanes de cuero que usa Guillermo
+8. **Alcohuaz** — verde, cerros con sol (qué hacer en el pueblo) En Reseñas no subir comentarios que
+nombren enfermedades o digan que algo se curó (misma regla de los
+textos de salud). Se eligió "Cuencos" y no
+"Meditaciones" porque es lo que la gente busca, y "Alcohuaz" y no
+"Biomagnetismo" porque Terapias ya lo cubre, porque Alcohuaz atrae al
+turista de Pisco Elqui y porque el nombre largo se corta en Instagram.
+
 **Textos de salud.** Todo se escribe como *acompañamiento complementario
 al bienestar*. No se nombran enfermedades, no se promete curación, no se
 dice “alta efectividad”. Cada página lleva una nota de que no reemplaza
@@ -305,8 +344,8 @@ medida es tal, medirlo en el navegador o leer el archivo.
 4. **Decidir si la web será autoadministrable** (Decap o Sveltia CMS,
    gratis). Antes hay que preguntarle a Guillermo si de verdad la va a
    usar.
-5. **Apuntar bioluz.cl a la web nueva — en curso (17 de septiembre de
-   2026).** Como no se conecta Mercado Pago por ahora, se saltó la
+5. **Apuntar bioluz.cl a la web nueva — ✅ terminado el 28 de octubre
+   de 2026** (historia completa abajo). Como no se conecta Mercado Pago por ahora, se saltó la
    mudanza a Netlify: se agregó el archivo `CNAME` (con `bioluz.cl`)
    al repositorio para que GitHub Pages sirva directo en ese dominio.
    Falta que Javi entre al panel de iHosting → Dominios → Zone Editor
@@ -315,6 +354,51 @@ medida es tal, medirlo en el navegador o leer el archivo.
    185.199.110.153 y 185.199.111.153). En cuanto se cambie, la web
    vieja deja de verse — no hace falta la cuenta de NIC Chile para
    esto, el registro sigue igual.
+   **Actualización 23 de septiembre de 2026:** el DNS ya está bien
+   (verificado: los 4 registros A apuntan a GitHub, www es CNAME a
+   bioluz.cl, sin registros CAA ni IPv6 que estorben). Pero GitHub
+   nunca emitió el certificado de seguridad (candado) para bioluz.cl:
+   sigue entregando el de `*.github.io`, y los celulares muestran
+   "no seguro". Pasa cuando el dominio se anotó en GitHub antes de
+   que el DNS apuntara ahí: GitHub no reintenta solo. Arreglo: en
+   GitHub → repo → Settings → Pages, borrar el dominio, guardar,
+   volver a escribir `bioluz.cl`, guardar, esperar el certificado y
+   marcar "Enforce HTTPS".
+   **Hecho el 23 de septiembre de 2026:** se quitó y volvió a poner el
+   dominio en GitHub; a los pocos minutos `https://bioluz.cl` ya
+   entregaba su propio certificado (Let's Encrypt, válido hasta el 22
+   de diciembre de 2026, GitHub lo renueva solo). Quedaron dos cosas
+   por terminar, que GitHub suele completar solo en unas horas:
+   `www.bioluz.cl` todavía entrega el certificado genérico, y la
+   casilla "Enforce HTTPS" dio error al marcarla. Hay que volver a
+   intentarlo más tarde.
+   Revisado de nuevo el mismo día (22:08): bioluz.cl sigue bien, pero
+   www sigue sin certificado y GitHub vuelve a "DNS check in
+   progress / Requesting a new certificate". Los dos servidores DNS de
+   iHosting responden igual, así que no es eso. La causa probable: el
+   registro de `www` es CNAME a `bioluz.cl`, y GitHub pide que sea
+   CNAME a **`javisalfate.github.io`** para incluir www en el
+   certificado. Arreglo: en iHosting → Zone Editor cambiar ese CNAME
+   de www (no tocar los 4 registros A ni los MX del correo).
+   **Hecho el 28 de octubre de 2026:** se cambió en iHosting → Zone
+   Editor el CNAME de `www.bioluz.cl` de `bioluz.cl` a
+   `javisalfate.github.io` (nada más se tocó). Después se quitó y volvió
+   a poner `bioluz.cl` en GitHub → Settings → Pages, y en un minuto
+   GitHub emitió un certificado que cubre **bioluz.cl y www.bioluz.cl**
+   (Let's Encrypt, válido hasta el 26 de enero de 2027, se renueva
+   solo). "Enforce HTTPS" quedó marcado (el primer intento se desmarcó
+   solo porque GitHub volvió a revisar el DNS; al segundo quedó).
+   Verificado desde afuera: `http://www.bioluz.cl` termina en
+   `https://bioluz.cl/` con candado. **Pendiente 5 terminado.**
+   Ojo: quitar y poner el dominio en GitHub crea solo dos commits
+   ("Delete CNAME" / "Create CNAME") en el repositorio; antes de
+   publicar cambios hay que traerlos con `git pull`.
+   **Cómo entrar al panel de iHosting:** el cPanel está en
+   `https://hs32.ihosting.cl/cpanel` (usuario y clave los tiene
+   guardados Javi en Chrome; no se anotan acá porque este archivo es
+   público en GitHub). Ojo: no es el "Portal clientes" de
+   ihosting.cl, ese es otro acceso. `cpanel.bioluz.cl` también lleva al
+   mismo servidor.
 6. **Página de Seminarios** dice que el alojamiento está incluido en el
    diplomado, pero las cabañas están cerradas. Hay que resolver esa
    contradicción con Guillermo.
